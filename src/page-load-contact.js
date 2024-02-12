@@ -1,14 +1,19 @@
-function createContactPage(){
+import { cleanPage } from "./cleanpage";
+
+export default function createContactPage()
+{
+    cleanPage();
     const element = document.querySelector('#content');
     element.appendChild(createContactUs());
-    createContactPerson().forEach((val)=>{
-        element.appendChild(val);       
+    createContactPerson().forEach((val) =>
+    {
+        element.appendChild(val);
 
     })
-
 }
 
-function createContactUs(){
+function createContactUs()
+{
     const element = document.createElement('div');
     const element1 = document.createElement('h1');
     element1.textContent = "Contact Us";
@@ -16,40 +21,46 @@ function createContactUs(){
     return element;
 }
 
-function createContactPerson(){
+function createContactPerson()
+{
     const divArray = [];
     const personArray = [];
-    const manager = new PersonDetails('Meowser','Manager','Meowser911','9876')
-    const chef = new PersonDetails('Meowhef','Chef','Meowhefgoodfood','7777')
-    const serviceStaff = new PersonDetails('Meowvice','Service Staff','Meowstaff','7985')
-    personArray.push(manager,chef,serviceStaff)
-    
-    while(divArray.length<3){
+    const manager = new PersonDetails('Meowser', 'Manager', 'Meowser911', '9876')
+    const chef = new PersonDetails('Meowhef', 'Chef', 'Meowhefgoodfood', '7777')
+    const serviceStaff = new PersonDetails('Meowvice', 'Service Staff', 'Meowstaff', '7985')
+    personArray.push(manager, chef, serviceStaff)
+
+    while (divArray.length < 3)
+    {
         const element = document.createElement('div');
         divArray.push(element);
     }
 
-    divArray.forEach((div)=>{
-        // go with the shift for now post on odin for iteration
-        const value = personArray.shift();
+    divArray.forEach((div, index) =>
+    {
+        const value = personArray[index];
         const header2 = document.createElement('h2');
         header2.textContent = value.name;
         div.appendChild(header2);
-        for(let toInsert in value){
-            if(toInsert === 'name'){
+        for (let toInsert in value)
+        {
+            if (toInsert === 'name')
+            {
                 continue;
             }
             const elementParagraph = document.createElement('p')
             elementParagraph.textContent = value[toInsert];
             div.appendChild(elementParagraph);
-        } 
+        }
     })
-    return divArray;    
+    return divArray;
 
 }
 
-class PersonDetails{
-    constructor(name,profession,email,number){
+class PersonDetails
+{
+    constructor(name, profession, email, number)
+    {
         this.name = name;
         this.profession = profession;
         this.email = `${email}@meowmail.com`
@@ -57,6 +68,3 @@ class PersonDetails{
     }
 }
 
-const test1 = () => console.log("PageLoad-contact");
-
-export {test1 , createContactPage}

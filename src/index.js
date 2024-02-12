@@ -1,9 +1,7 @@
-import {test,createFrontPage} from './page-load-home';
-import { test1, createContactPage } from './page-load-contact';
+import createFrontPage from './page-load-home';
+import createContactPage from './page-load-contact';
 
-// console.log('hello new changes')
-// test();
+
 // createFrontPage();
-// test1();
-createContactPage();
-
+// document.querySelector('.Home-btn').addEventListener('click',createFrontPage);
+// document.querySelector('.Contact-btn').addEventListener('click',createContactPage);

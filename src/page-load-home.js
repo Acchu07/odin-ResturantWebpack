@@ -1,5 +1,7 @@
-function createFrontPage()
+import { cleanPage } from "./cleanpage";
+export default function createFrontPage()
 {
+    cleanPage();
     const content = document.querySelector('#content');
     content.appendChild(createTitle());
     content.appendChild(createReview());
@@ -31,10 +33,12 @@ function createReview()
     return element;
 }
 
-function createTiming(){
+function createTiming()
+{
     const element = document.createElement('div');
     const paraArray = [];
-    for(let i = 0; i < 4; i++){
+    for (let i = 0; i < 4; i++)
+    {
         const element1 = document.createElement('p');
         paraArray.push(element1);
     }
@@ -43,12 +47,10 @@ function createTiming(){
     paraArray[2].textContent = "Extended Weekends: Open until 9pm on Fridays and Saturdays for socializing and late-night cat therapy.";
     paraArray[3].textContent = "Early Bird Purrs: Open from 8am to 12pm for those who want to start their day with a dose of cuteness.";
 
-    paraArray.forEach((paraElement)=>{
+    paraArray.forEach((paraElement) =>
+    {
         element.appendChild(paraElement);
     })
     return element;
 }
 
-const test = () => console.log("PageLoad")
-
-export {test,createFrontPage}
