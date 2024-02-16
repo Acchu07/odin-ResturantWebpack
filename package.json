@@ -5,7 +5,8 @@
   "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "test1": "git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
   "author": "",

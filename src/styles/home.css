@@ -1,5 +1,5 @@
 @font-face {
-    font-family: MeowFont;
+    font-family: 'Meow Font';
     src: url('../fonts/lms-cat-treats-font/LmsCatTreats.ttf'), format('ttf');
 }
 
@@ -21,6 +21,6 @@
 .changeFont{
     color: Orange;
     font-size: 25px;
-    font-family: MeowFont,'Arial Narrow', Arial, sans-serif;
+    font-family: 'Meow Font','Courier New', Courier, monospace;
 }
 

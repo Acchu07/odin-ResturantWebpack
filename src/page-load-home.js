@@ -27,13 +27,11 @@ function createReview()
     const element1 = document.createElement('p');
     element1.innerText = "The Purrfect Cup is a five-paw extravaganza for any feline (and feline-friendly human) on the prowl for a good time. From the pawsome atmosphere to the purr-ocious company, it's a guaranteed tail-wagger of a good time. Just remember, humans: respect the floof, and you'll be feline fine!"
     const element2 = document.createElement('p');
-    const element3 = document.createElement('span');
-    element3.innerText = "Meowth Rating: ⭐⭐⭐⭐⭐ (with extra tuna-can bonus points!)";
-    element3.classList.add('changeFont')
+    element2.innerText = "Meowth Rating: ⭐⭐⭐⭐⭐ (with extra tuna-can bonus points!)";
+    element2.classList.add('changeFont')
 
     element.appendChild(element1);
     element.appendChild(element2);
-    element2.appendChild(element3);
     return element;
 }
 
