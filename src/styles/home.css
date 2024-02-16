@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Meow Font';
-    src: url('../fonts/lms-cat-treats-font/LmsCatTreats.ttf'), format('opentype');
+    src: url('../fonts/lms-cat-treats-font/LmsCatTreats.ttf'), format('truetype');
 }
 
 .title{

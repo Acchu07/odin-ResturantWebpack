@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "test1": "git subtree push --prefix dist origin gh-pages"
+    "test1": "git subtree push --prefix dist origin gh-pages",
+    "help": "git add . && git commit -m 'need help from odin discord' && git push origin main"
   },
   "keywords": [],
   "author": "",
