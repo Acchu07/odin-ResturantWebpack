@@ -1,0 +1,26 @@
+@font-face {
+    font-family: MeowFont;
+    src: url('../fonts/lms-cat-treats-font/LmsCatTreats.ttf'), format('ttf');
+}
+
+.title{
+    color: orange;
+    justify-self: center;
+}
+
+#content{
+    display: grid;
+    gap: 10px;
+}
+
+.title ~ div{
+    border: 3px orange solid;
+    padding: 5vh;
+}
+
+.changeFont{
+    color: Orange;
+    font-size: 25px;
+    font-family: MeowFont,'Arial Narrow', Arial, sans-serif;
+}
+
