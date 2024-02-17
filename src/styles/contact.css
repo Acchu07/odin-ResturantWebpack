@@ -1,0 +1,18 @@
+.content2{
+    display: grid;
+    gap: 10px;    
+}
+
+.content2 > div{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    border: 1px solid orange;
+    margin: 25px;
+    padding: 25px;
+    justify-items: center;
+}
+
+body{
+    background: black;
+    color: white;
+}

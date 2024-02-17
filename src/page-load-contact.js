@@ -1,15 +1,19 @@
 import { cleanPage } from "./cleanpage";
+import './styles/contact.css'
 
 export default function createContactPage()
 {
     cleanPage();
-    const element = document.querySelector('#content');
+    const element1 = document.querySelector('#content');
+    const element = document.createElement('div');
+    element.classList.add('content2');
     element.appendChild(createContactUs());
     createContactPerson().forEach((val) =>
     {
         element.appendChild(val);
 
     })
+    element1.appendChild(element);
 }
 
 function createContactUs()
