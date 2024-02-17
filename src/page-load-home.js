@@ -9,19 +9,19 @@ export default function createFrontPage()
     const content = document.createElement('div');
     content.classList.add('content1');
 
-    const img = document.createElement('img');
-    img.classList.add('img');
-    img.src = catImage
-    
-    console.log(img);
-
-    content.appendChild(img);
+    content.appendChild(createImage());
     content.appendChild(createTitle());
     content.appendChild(createReview());
     content.appendChild(createTiming());
     content1.appendChild(content);
 }
 
+function createImage(){
+    const img = document.createElement('img');
+    img.classList.add('img');
+    img.src = catImage;
+    return img;
+}
 
 function createTitle()
 {
