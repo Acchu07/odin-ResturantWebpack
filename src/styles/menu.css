@@ -1,0 +1,13 @@
+.beverage{
+    display: grid;
+}
+
+h1{
+    font-family: 'Meow Font';
+    color: darkorange;
+}
+
+h2{
+    font-family: 'Meow Font';
+    color: orange;
+}

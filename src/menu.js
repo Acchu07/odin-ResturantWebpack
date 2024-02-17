@@ -1,4 +1,5 @@
 import { cleanPage } from "./cleanpage";
+import "./styles/menu.css"
 
 export function createMenu(){
     cleanPage();
@@ -12,6 +13,7 @@ function createBeverage(){
     const menuTitleDiv = document.createElement('div');
     const menuTitleHeader = document.createElement('h1');
     menuTitleHeader.innerText = 'Beverages';
+    menuTitleDiv.classList.add('beverage');
     menuTitleDiv.appendChild(menuTitleHeader);
     
 
