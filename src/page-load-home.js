@@ -1,13 +1,25 @@
 import { cleanPage } from "./cleanpage";
 import './styles/home.css';
+import catImage from './images/brow_tabby_cat.jpg';
 
 export default function createFrontPage()
 {
     cleanPage();
-    const content = document.querySelector('#content');
+    const content1 = document.querySelector('#content');
+    const content = document.createElement('div');
+    content.classList.add('content1');
+
+    const img = document.createElement('img');
+    img.classList.add('img');
+    img.src = catImage
+    
+    console.log(img);
+
+    content.appendChild(img);
     content.appendChild(createTitle());
     content.appendChild(createReview());
     content.appendChild(createTiming());
+    content1.appendChild(content);
 }
 
 
@@ -16,7 +28,7 @@ function createTitle()
     const element = document.createElement('div');
     const element1 = document.createElement('h1');
     element1.innerText = "Cat Cat Cafe";
-    element.classList.add('title')
+    element.classList.add('title','changeFont');
     element.appendChild(element1);
     return element;
 }
