@@ -2,7 +2,9 @@
     display: grid;
 }
 
-h1{
+
+/* Css is shared across other js files why? */
+h1{ 
     font-family: 'Meow Font';
     color: darkorange;
 }
